@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b0221">
+  <title>Opening Cipher Nexus Arcade…</title>
+  <script>
+    const gameIds = {
+      'cipher-nexus': 'runner',
+      'void-legends': 'arena',
+      ashfall: 'ember',
+      'iron-clash': 'duel'
+    };
+    const id = new URLSearchParams(location.search).get('id');
+    location.replace('index.html?game=' + encodeURIComponent(gameIds[id] || 'runner'));
+  </script>
+</head>
+<body>
+  <p>Opening the game… <a href="index.html">Go to Cipher Nexus Arcade</a></p>
+</body>
+</html>

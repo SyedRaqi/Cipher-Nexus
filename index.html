@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0b0221">
+  <meta name="description" content="Play four original Cipher Nexus arcade games in your browser.">
+  <link rel="icon" type="image/svg+xml" href="logo.svg">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Cipher Nexus Arcade</title>
+  <script defer src="js/background.js"></script>
+  <script defer src="js/leaderboard.js"></script>
+  <script defer src="js/board.js"></script>
+  <script defer src="js/app.js"></script>
+  <script defer src="js/entry.js"></script>
+</head>
+<body class="opening-active">
+  <canvas id="bg" aria-hidden="true"></canvas>
+  <section class="opening" id="opening" role="dialog" aria-modal="true" aria-labelledby="opening-title" aria-describedby="opening-copy">
+    <div class="opening-sky" aria-hidden="true">
+      <i class="gate gate-outer"></i>
+      <i class="gate gate-middle"></i>
+      <i class="gate gate-inner"></i>
+      <i class="gate-core"></i>
+      <i class="opening-beam"></i>
+    </div>
+    <div class="opening-content">
+      <p class="opening-kicker" id="opening-status" aria-live="polite">Incoming transmission · establishing signal</p>
+      <h1 class="opening-title" id="opening-title">CIPHER <span>NEXUS</span></h1>
+      <p class="opening-copy" id="opening-copy">Four worlds are waiting beyond the gate.</p>
+      <button class="opening-enter" id="enter-arcade" type="button">Enter to play <span aria-hidden="true">↗</span></button>
+      <p class="opening-hint">The arcade opens after the signal locks.</p>
+    </div>
+  </section>
+  <div class="wrap" inert>
+    <header class="top">
+      <a class="brand" href="#play">CIPHER <b>NEXUS</b> ARCADE</a>
+      <nav class="links" aria-label="Page sections">
+        <a href="#play">Play</a>
+        <a href="#leaderboard">Leaderboard</a>
+        <a href="#about">About</a>
+        <a href="#help">Help</a>
+      </nav>
+      <div class="meta">
+        <span>Nexus rank: <strong id="rank" aria-live="polite">Unranked</strong></span>
+        <button class="chip" id="mute" type="button" aria-pressed="false">Sound on</button>
+      </div>
+    </header>
+
+    <main id="main">
+      <div class="hall" id="play">
+        <nav class="rail" id="rail" role="tablist" aria-label="Choose a game"></nav>
+        <section class="cabinet" aria-label="Arcade game">
+          <div class="marquee" id="mq">CIPHER NEXUS</div>
+          <div class="hud">
+            <span id="lv">Ready</span>
+            <span>Score: <b id="sc">0</b></span>
+            <span>Best: <b id="bs">0</b></span>
+          </div>
+          <div class="screen">
+            <canvas id="cv" aria-label="Arcade game canvas" role="img"></canvas>
+            <div class="ov" id="ov" role="group" aria-label="Game instructions">
+              <h2 id="ot">Cipher Nexus Arcade</h2>
+              <p id="od">Choose a game, then start playing.</p>
+              <p class="keys" id="oc"></p>
+              <form id="sub" class="sub" hidden>
+                <input id="nm" maxlength="16" placeholder="Your name" aria-label="Your name" autocomplete="nickname" required>
+                <button class="go sm" type="submit">Post score</button>
+              </form>
+              <p class="keys" id="sm" aria-live="polite"></p>
+              <button class="go" id="go" type="button">Start game</button>
+            </div>
+          </div>
+          <div class="pad" id="pad" aria-label="Touch game controls"></div>
+          <p class="tip">Move with the arrow keys or WASD. Press P or Escape to pause.</p>
+        </section>
+      </div>
+
+      <section id="leaderboard" class="block" aria-labelledby="h-lb">
+        <div class="bh">
+          <h2 id="h-lb">Global leaderboard</h2>
+          <span class="badge" id="mode">Checking…</span>
+        </div>
+        <div class="tools">
+          <div class="tabs" id="lbtabs" role="tablist" aria-label="Choose a game"></div>
+          <label class="who">Playing as
+            <input id="who" maxlength="16" placeholder="Pick a name" autocomplete="nickname">
+          </label>
+          <button class="chip" id="lbref" type="button">Refresh</button>
+        </div>
+        <div class="tw">
+          <table>
+            <caption class="sr">Top ten scores for the selected game</caption>
+            <thead>
+              <tr>
+                <th scope="col">Rank</th>
+                <th scope="col">Player</th>
+                <th scope="col">Score</th>
+                <th scope="col">Date</th>
+              </tr>
+            </thead>
+            <tbody id="lbrows"></tbody>
+          </table>
+        </div>
+        <p class="tip" id="lbmsg" aria-live="polite"></p>
+      </section>
+
+      <section id="about" class="block" aria-labelledby="h-ab">
+        <h2 id="h-ab">About the arcade</h2>
+        <div class="cols">
+          <article>
+            <h3>Four games, one cabinet</h3>
+            <p>A shooter, a chase, a runner and a mech duel, all playable in the browser with keyboard or touch.</p>
+          </article>
+          <article>
+            <h3>Built to be fair</h3>
+            <p>Every game runs at the same speed on any screen, and scores are checked against what each game can really produce.</p>
+          </article>
+          <article>
+            <h3>Nexus rank</h3>
+            <p>Your best score in each game adds up to a rank, from Static to Nexus legend.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="help" class="block" aria-labelledby="h-hp">
+        <h2 id="h-hp">Help</h2>
+        <details>
+          <summary>How do I pause?</summary>
+          <p>Press P or Esc. The game also pauses when you switch tabs.</p>
+        </details>
+        <details>
+          <summary>How do I play on a phone?</summary>
+          <p>On-screen buttons appear under the game on touch devices. Tap Start game, then use the buttons.</p>
+        </details>
+        <details>
+          <summary>Why is my score not on the global board?</summary>
+          <p>You need a name of at least two characters and an internet connection. If the board shows Offline, scores stay on your device.</p>
+        </details>
+        <details>
+          <summary>Can I change my name?</summary>
+          <p>Yes. Edit the Playing as field in the leaderboard section. Past scores keep the name they were posted with.</p>
+        </details>
+      </section>
+    </main>
+
+    <footer class="foot">
+      <span>© 2026 Cipher Nexus Studio</span>
+      <span>Fan-made demo. Scores are for fun.</span>
+    </footer>
+  </div>
+</body>
+</html>

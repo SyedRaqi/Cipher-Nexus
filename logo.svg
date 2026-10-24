@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">Cipher Nexus</title>
+  <desc id="desc">A glowing portal framed by a geometric C and N.</desc>
+  <defs>
+    <linearGradient id="edge" x1="70" y1="70" x2="442" y2="442" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#00f0ff"/><stop offset=".52" stop-color="#9d4dff"/><stop offset="1" stop-color="#ff2e97"/>
+    </linearGradient>
+    <radialGradient id="core"><stop stop-color="#fff"/><stop offset=".12" stop-color="#00f0ff"/><stop offset=".52" stop-color="#9d4dff" stop-opacity=".65"/><stop offset="1" stop-color="#ff2e97" stop-opacity="0"/></radialGradient>
+    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="9" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <path fill="#0b0221" d="M0 0h512v512H0z"/>
+  <circle cx="256" cy="256" r="182" fill="url(#core)" opacity=".75"/>
+  <g fill="none" stroke="url(#edge)" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow)">
+    <path stroke-width="24" d="M209 114H130a34 34 0 0 0-34 34v216a34 34 0 0 0 34 34h79"/>
+    <path stroke-width="24" d="M303 114h79a34 34 0 0 1 34 34v216a34 34 0 0 1-34 34h-79"/>
+    <path stroke="#fff" stroke-width="12" d="M171 340V172l170 168V172"/>
+  </g>
+  <circle cx="256" cy="256" r="18" fill="#fff" filter="url(#glow)"/>
+</svg>
