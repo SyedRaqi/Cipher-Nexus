@@ -27,13 +27,17 @@
 
 </div>
 
-<img src="https://capsule-render.vercel.app/api?type=rect&color=0:FF2BD6,50:FFE600,100:00F0FF&height=3" width="100%" alt="divider"/>
+<img src="cipher-nexus-runner.svg" width="100%" alt="Pixel runner collecting coins" />
 
 ## 🕹️ Press Start
 
 > **Cipher Nexus is a simple game for youngsters.**
 
 It's a little arcade that lives in your browser: a game catalog you can search and filter by genre, individual game pages, lore, news, a community corner, and a leaderboard where your scores post automatically once you've picked a name. No installs, no build tools, just open it and play.
+
+<div align="center">
+<img src="cipher-nexus-crt.svg" width="92%" alt="Retro CRT monitor showing a sample pixel-art game scene" />
+</div>
 
 ## 🏟️ The Arcade Floor
 
@@ -64,6 +68,12 @@ It's a little arcade that lives in your browser: a game catalog you can search a
 </details>
 
 ## ⚡ Power-Ups
+
+<div align="center">
+<img src="cipher-nexus-powerups.svg" width="96%" alt="Six pixel-art power-up icons" />
+</div>
+
+<br/>
 
 <table>
 <tr>
@@ -107,6 +117,14 @@ The pages are set up with a mobile viewport and a themed browser bar color.
 </td>
 </tr>
 </table>
+
+## 🎯 How a Run Goes
+
+<div align="center">
+<img src="cipher-nexus-journey.svg" width="96%" alt="Storyboard: find, pick, play, score" />
+</div>
+
+<img src="cipher-nexus-runner.svg" width="100%" alt="Pixel runner collecting coins" />
 
 ## 🏆 Hall of Fame
 
@@ -152,7 +170,32 @@ python -m http.server 8000
 
 then visit http://localhost:8000.
 
-## 🧱 Inside the Cabinet
+<img src="cipher-nexus-runner.svg" width="100%" alt="Pixel runner collecting coins" />
+
+## 🔧 Inside the Cabinet
+
+Pop the back panel off and this is what's humming inside. The glowing pulses show how the pieces feed each other.
+
+<div align="center">
+<img src="cipher-nexus-cabinet.svg" width="96%" alt="Cutaway circuit board of the Cipher Nexus cabinet showing how its files connect" />
+</div>
+
+<br/>
+
+| 🔩 CHIP | 📍 WHERE | ⚡ JOB |
+|---|---|---|
+| 📋 **Catalog** | `js/data.js` | Holds the game list the catalog page draws from |
+| 🎨 **Art** | `js/art.js` | Visuals for the arcade |
+| 🧩 **Parts** | `js/components.js` | Shared page pieces like the header and footer |
+| 🧠 **Logic** | `js/main.js` | The brain that runs on every page |
+| 🌌 **Backdrop** | `js/scene.js` | The animated canvas scene behind the pages |
+| 🖌️ **Style** | `css/` | The neon paint job |
+| 🏆 **Scoreboard** | `js/leaderboard.js` | Leaderboard logic, plus the `CONFIG` for Supabase |
+| ☁️ **Cloud (optional)** | `supabase/schema.sql` | Database setup for global scores |
+| 📺 **Screens** | `*.html`, `logo.svg` | The ten pages and the Nexus mark |
+
+<details>
+<summary><b>🗂️ Show the raw file tree</b></summary>
 
 ```text
 Cipher-Nexus/
@@ -163,14 +206,14 @@ Cipher-Nexus/
 ├── logo.svg                                # the Nexus mark
 ├── css/                                    # styles
 ├── js/
-│   ├── data.js                             # game catalog data
-│   ├── art.js · components.js              # visuals and shared page pieces
-│   ├── main.js                             # page logic
-│   ├── scene.js                            # animated canvas backdrop
-│   └── leaderboard.js                      # leaderboard + CONFIG for Supabase
+│   ├── data.js · art.js · components.js
+│   ├── main.js · scene.js
+│   └── leaderboard.js
 └── supabase/
-    └── schema.sql                          # database setup for global scores
+    └── schema.sql
 ```
+
+</details>
 
 ## 📜 License
 
@@ -178,7 +221,7 @@ Released under the [Unlicense](LICENSE). Take it, remix it, make it your own.
 
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:FF2BD6,50:7C3AED,100:00F0FF&height=140&section=footer&text=GAME%20ON&fontColor=ffffff&fontSize=30&fontAlignY=70" width="100%" alt="Footer: game on"/>
+<img src="cipher-nexus-continue.svg" width="100%" alt="Continue? countdown footer" />
 
 **Cipher Nexus** · Built by [Syed Raqi](https://github.com/SyedRaqi) · [⭐ Star it if you had fun](https://github.com/SyedRaqi/Cipher-Nexus)
 
