@@ -1,8 +1,8 @@
-<!-- CIPHER NEXUS | NEON ARCADE README -->
+<!-- CIPHER NEXUS | CINEMATIC NEON ARCADE README -->
 
 <div align="center">
 
-<img src="cipher-nexus-banner.svg" width="100%" alt="Cipher Nexus animated neon arcade banner" />
+<img src="nx-hero.svg" width="100%" alt="Cipher Nexus: a neon synthwave arcade banner with a pixel-font title, a striped sun and a moving grid" />
 
 <a href="https://github.com/SyedRaqi/Cipher-Nexus">
   <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=20&duration=2800&pause=900&color=FF2BD6&center=true&vCenter=true&width=760&lines=Insert+coin.+Press+start.;A+simple+game+for+youngsters.;Search.+Filter.+Play.;Set+your+name.+Climb+the+board." alt="Typing animation" />
@@ -10,11 +10,11 @@
 
 <br/>
 
-<a href="#-insert-coin"><img src="https://img.shields.io/badge/INSERT%20COIN-FF2BD6?style=for-the-badge&logo=gamepad&logoColor=white" alt="Insert coin"/></a>
+<a href="#insertcoin"><img src="https://img.shields.io/badge/INSERT%20COIN-FF2BD6?style=for-the-badge&logo=gamepad&logoColor=white" alt="Insert coin"/></a>
 &nbsp;
-<a href="#-the-arcade-floor"><img src="https://img.shields.io/badge/ARCADE%20FLOOR-00B8D4?style=for-the-badge&logo=rocket&logoColor=white" alt="Arcade floor"/></a>
+<a href="#floor"><img src="https://img.shields.io/badge/ARCADE%20FLOOR-00B8D4?style=for-the-badge&logo=rocket&logoColor=white" alt="Arcade floor"/></a>
 &nbsp;
-<a href="#-hall-of-fame"><img src="https://img.shields.io/badge/HALL%20OF%20FAME-F5C400?style=for-the-badge&logo=trophy&logoColor=black" alt="Hall of fame"/></a>
+<a href="#fame"><img src="https://img.shields.io/badge/HALL%20OF%20FAME-F5C400?style=for-the-badge&logo=trophy&logoColor=black" alt="Hall of fame"/></a>
 
 <br/><br/>
 
@@ -25,24 +25,30 @@
 <img src="https://img.shields.io/badge/NO%20BUILD%20STEP-7C3AED?style=flat-square" alt="No build step"/>
 <img src="https://img.shields.io/badge/LICENSE-UNLICENSE-lightgrey?style=flat-square" alt="Unlicense"/>
 
+<br/><br/>
+
+<img src="nx-marquee.svg" width="100%" alt="HTML5, CSS3, JavaScript, Supabase optional, no build step, Unlicense" />
+
 </div>
 
-<img src="cipher-nexus-runner.svg" width="100%" alt="Pixel runner collecting coins" />
+<img src="nx-runner.svg" width="100%" alt="Pixel runner jumping through a neon city, collecting coins" />
 
-## 🕹️ Press Start
+<a name="press"></a>
+<img src="nx-h-press.svg" width="100%" alt="Stage 00: Press Start" />
 
 > **Cipher Nexus is a simple game for youngsters.**
 
 It's a little arcade that lives in your browser: a game catalog you can search and filter by genre, individual game pages, lore, news, a community corner, and a leaderboard where your scores post automatically once you've picked a name. No installs, no build tools, just open it and play.
 
 <div align="center">
-<img src="cipher-nexus-crt.svg" width="92%" alt="Retro CRT monitor showing a sample pixel-art game scene" />
+<img src="nx-crt.svg" width="100%" alt="Retro CRT monitor showing a sample pixel-art scene with a runner, coins and a score counter" />
 </div>
 
-## 🏟️ The Arcade Floor
+<a name="floor"></a>
+<img src="nx-h-floor.svg" width="100%" alt="Stage 01: The Arcade Floor" />
 
 <div align="center">
-<img src="cipher-nexus-floor.svg" width="96%" alt="The ten pages of the Cipher Nexus site as floating arcade screens" />
+<img src="nx-floor.svg" width="100%" alt="The ten pages of the Cipher Nexus site as floating arcade screens" />
 </div>
 
 <br/>
@@ -67,10 +73,11 @@ It's a little arcade that lives in your browser: a game catalog you can search a
 
 </details>
 
-## ⚡ Power-Ups
+<a name="power"></a>
+<img src="nx-h-power.svg" width="100%" alt="Stage 02: Power-Ups" />
 
 <div align="center">
-<img src="cipher-nexus-powerups.svg" width="96%" alt="Six pixel-art power-up icons" />
+<img src="nx-powerups.svg" width="100%" alt="Six pixel-art power-up icons: search, genre filters, auto-posting scores, offline or global, living backdrop, pocket ready" />
 </div>
 
 <br/>
@@ -118,19 +125,23 @@ The pages are set up with a mobile viewport and a themed browser bar color.
 </tr>
 </table>
 
-## 🎯 How a Run Goes
+<a name="run"></a>
+<img src="nx-h-run.svg" width="100%" alt="Stage 03: How a Run Goes" />
 
 <div align="center">
-<img src="cipher-nexus-journey.svg" width="96%" alt="Storyboard: find, pick, play, score" />
+<img src="nx-journey.svg" width="100%" alt="Storyboard: search, filter, play, score" />
 </div>
 
-<img src="cipher-nexus-runner.svg" width="100%" alt="Pixel runner collecting coins" />
+<img src="nx-runner.svg" width="100%" alt="Pixel runner jumping through a neon city, collecting coins" />
 
-## 🏆 Hall of Fame
+<a name="fame"></a>
+<img src="nx-h-fame.svg" width="100%" alt="Stage 04: Hall of Fame" />
 
 <div align="center">
-<img src="cipher-nexus-leaderboard.svg" width="94%" alt="Leaderboard with offline and global modes" />
+<img src="nx-leaderboard.svg" width="100%" alt="Leaderboard with offline and global modes, and fair-play notes" />
 </div>
+
+<br/>
 
 The page includes a leaderboard. Scores post automatically after each run once the player has set a name (at least 2 characters).
 
@@ -145,10 +156,11 @@ The page includes a leaderboard. Scores post automatically after each run once t
 
 > 🛡️ **Fair-play notes:** the anon key is designed to be public. Row level security allows reading and adding scores only, and the database rejects scores above what each game can produce and limits each name to one submission per 10 seconds. Because the games run in the browser, a determined cheater can still post a believable score.
 
-## 🪙 Insert Coin
+<a name="insertcoin"></a>
+<img src="nx-h-coin.svg" width="100%" alt="Stage 05: Insert Coin" />
 
 <div align="center">
-<img src="cipher-nexus-start.svg" width="92%" alt="Insert coin, then press start" />
+<img src="nx-start.svg" width="100%" alt="Insert coin, then press start: clone the code and open the arcade" />
 </div>
 
 <br/>
@@ -170,14 +182,15 @@ python -m http.server 8000
 
 then visit http://localhost:8000.
 
-<img src="cipher-nexus-runner.svg" width="100%" alt="Pixel runner collecting coins" />
+<img src="nx-runner.svg" width="100%" alt="Pixel runner jumping through a neon city, collecting coins" />
 
-## 🔧 Inside the Cabinet
+<a name="cabinet"></a>
+<img src="nx-h-cabinet.svg" width="100%" alt="Stage 06: Inside the Cabinet" />
 
 Pop the back panel off and this is what's humming inside. The glowing pulses show how the pieces feed each other.
 
 <div align="center">
-<img src="cipher-nexus-cabinet.svg" width="96%" alt="Cutaway circuit board of the Cipher Nexus cabinet showing how its files connect" />
+<img src="nx-cabinet.svg" width="100%" alt="Cutaway circuit board of the Cipher Nexus cabinet showing how its files connect" />
 </div>
 
 <br/>
@@ -215,13 +228,14 @@ Cipher-Nexus/
 
 </details>
 
-## 📜 License
+<a name="license"></a>
+<img src="nx-h-license.svg" width="100%" alt="Stage 07: Final Stage, License" />
 
 Released under the [Unlicense](LICENSE). Take it, remix it, make it your own.
 
 <div align="center">
 
-<img src="cipher-nexus-continue.svg" width="100%" alt="Continue? countdown footer" />
+<img src="nx-continue.svg" width="100%" alt="Continue? 9 8 7 countdown, then insert coin" />
 
 **Cipher Nexus** · Built by [Syed Raqi](https://github.com/SyedRaqi) · [⭐ Star it if you had fun](https://github.com/SyedRaqi/Cipher-Nexus)
 
